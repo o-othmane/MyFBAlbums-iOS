@@ -1,24 +1,839 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Xq-Ig-wy7">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--My FB Albums-->
+        <scene sceneID="C1h-67-R46">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="SsW-ZE-VT0" customClass="AlbumsVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LcX-j4-3C2"/>
+                        <viewControllerLayoutGuide type="bottom" id="V8I-Mx-mvv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pIX-uO-sp9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="206" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23a-TM-gHL">
+                                <rect key="frame" x="0.0" y="223" width="375" height="506"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.22352941179999999" green="0.33725490200000002" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="AlbumCoverCellId" rowHeight="206" id="s7V-rk-IEo" customClass="AlbumsTableViewCell" customModule="MyFBAlbums" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="206"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s7V-rk-IEo" id="Mos-Ji-Xo2">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="205.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-Ka-DTt">
+                                                    <rect key="frame" x="8" y="8" width="359" height="190"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdZ-Xc-Qur">
+                                                    <rect key="frame" x="46" y="84" width="283" height="37"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="highlightedColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="shadowColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <size key="shadowOffset" width="1" height="1"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="top" secondItem="Mos-Ji-Xo2" secondAttribute="topMargin" id="6D2-xp-0mP"/>
+                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="leading" secondItem="Mos-Ji-Xo2" secondAttribute="leadingMargin" id="Hsd-vc-Kch"/>
+                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="centerX" secondItem="vdL-Ka-DTt" secondAttribute="centerX" id="O2e-wD-n4G"/>
+                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="leading" secondItem="Mos-Ji-Xo2" secondAttribute="leadingMargin" constant="38" id="Pgn-Hd-eTl"/>
+                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="centerY" secondItem="vdL-Ka-DTt" secondAttribute="centerY" id="Rkr-AQ-7LD"/>
+                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="centerY" secondItem="Mos-Ji-Xo2" secondAttribute="centerY" id="dfh-wd-WIo"/>
+                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="centerX" secondItem="Mos-Ji-Xo2" secondAttribute="centerX" id="f9X-iW-k2h"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumCoverImageView" destination="vdL-Ka-DTt" id="UWs-Gc-J2w"/>
+                                            <outlet property="albumTitleLabel" destination="xdZ-Xc-Qur" id="wt2-AZ-hQc"/>
+                                            <segue destination="ACk-37-UWi" kind="show" id="fza-ev-Ma0"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SsW-ZE-VT0" id="qjl-rj-k9p"/>
+                                    <outlet property="delegate" destination="SsW-ZE-VT0" id="PB0-qa-ztt"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CA-tO-fds">
+                                <rect key="frame" x="138.66666666666663" y="184" width="98.333333333333343" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="q1n-y7-DEA">
+                                <rect key="frame" x="147.66666666666666" y="106" width="80" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Epb-jM-68F"/>
+                                    <constraint firstAttribute="width" secondItem="q1n-y7-DEA" secondAttribute="height" multiplier="15:14" id="oFg-En-INB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.72156862749999995" green="0.77647058820000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="q1n-y7-DEA" firstAttribute="centerX" secondItem="pIX-uO-sp9" secondAttribute="centerX" id="1yX-Od-gg0"/>
+                            <constraint firstItem="5CA-tO-fds" firstAttribute="top" secondItem="q1n-y7-DEA" secondAttribute="bottom" constant="3" id="CG2-nc-cc3"/>
+                            <constraint firstItem="23a-TM-gHL" firstAttribute="centerX" secondItem="pIX-uO-sp9" secondAttribute="centerX" id="HVK-Ez-RuK"/>
+                            <constraint firstItem="q1n-y7-DEA" firstAttribute="top" secondItem="LcX-j4-3C2" secondAttribute="bottom" constant="18" id="Hdf-Qb-wst"/>
+                            <constraint firstItem="5CA-tO-fds" firstAttribute="centerX" secondItem="pIX-uO-sp9" secondAttribute="centerX" id="P5x-hb-mA4"/>
+                            <constraint firstItem="23a-TM-gHL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d0k-Ov-kLM" secondAttribute="leading" id="Tq7-gP-iFY"/>
+                            <constraint firstItem="V8I-Mx-mvv" firstAttribute="top" secondItem="23a-TM-gHL" secondAttribute="bottom" id="Uix-Te-yTN"/>
+                            <constraint firstItem="23a-TM-gHL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d0k-Ov-kLM" secondAttribute="trailing" id="bPu-5W-tNo"/>
+                            <constraint firstItem="5CA-tO-fds" firstAttribute="top" secondItem="q1n-y7-DEA" secondAttribute="bottom" constant="3" id="fb4-jD-y3H"/>
+                            <constraint firstItem="23a-TM-gHL" firstAttribute="top" secondItem="5CA-tO-fds" secondAttribute="bottom" constant="15" id="uAK-Nf-Qzt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="d0k-Ov-kLM"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="My Albums" image="Albums" id="aJ8-ZL-xWQ">
+                        <color key="badgeColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="My FB Albums" id="LSQ-vP-6bL">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="B36-wA-Hbh"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileImage" destination="q1n-y7-DEA" id="IDv-Ci-pk5"/>
+                        <outlet property="profileNameLabel" destination="5CA-tO-fds" id="JpC-74-1XB"/>
+                        <outlet property="tableView" destination="23a-TM-gHL" id="w2z-2Y-hXc"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6k4-5h-fCG" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="4118" y="-654"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="ylN-QC-BIL">
+            <objects>
+                <collectionViewController id="ACk-37-UWi" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bm4-iR-uWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fWr-bQ-i5r">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumImageCellId" id="X0C-Xa-ZZP">
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="customSize" width="100" height="100"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="ACk-37-UWi" id="bft-v6-6kj"/>
+                            <outlet property="delegate" destination="ACk-37-UWi" id="1EL-4k-cuj"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fzy-9s-jkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5012" y="-654"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="mNV-Ke-cIj">
+            <objects>
+                <tableViewController id="o9h-NB-zyk" customClass="SettingsVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VXo-bA-Kii">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.72156862749999995" green="0.77647058820000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection headerTitle="Email" id="tRi-D9-2va">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="45" id="6Fg-pY-ZJC">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="45"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Fg-pY-ZJC" id="j55-QK-JZh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Stx-LN-Z7L" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="Lpi-ov-Euy"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Stx-LN-Z7L" firstAttribute="leading" secondItem="j55-QK-JZh" secondAttribute="leadingMargin" id="4cR-QM-cDP"/>
+                                                <constraint firstItem="Stx-LN-Z7L" firstAttribute="centerY" secondItem="j55-QK-JZh" secondAttribute="centerY" id="dXL-Kn-sSL"/>
+                                                <constraint firstItem="Stx-LN-Z7L" firstAttribute="trailing" secondItem="j55-QK-JZh" secondAttribute="trailingMargin" id="rIZ-9f-KI9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="mrF-RD-hA6">
+                                        <rect key="frame" x="0.0" y="73" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mrF-RD-hA6" id="jhc-UQ-bGA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Awr-vm-jo4" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="sx0-tt-MWi"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Awr-vm-jo4" firstAttribute="leading" secondItem="jhc-UQ-bGA" secondAttribute="leadingMargin" id="BB9-rR-dPT"/>
+                                                <constraint firstItem="Awr-vm-jo4" firstAttribute="centerY" secondItem="jhc-UQ-bGA" secondAttribute="centerY" id="NeR-46-qCw"/>
+                                                <constraint firstItem="Awr-vm-jo4" firstAttribute="trailing" secondItem="jhc-UQ-bGA" secondAttribute="trailingMargin" id="WuF-NS-Zne"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="DXo-Df-ZOG">
+                                        <rect key="frame" x="0.0" y="117" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXo-Df-ZOG" id="dk7-VO-zgJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdB-Lh-aFQ" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <state key="normal" title="Change Email Address">
+                                                        <color key="titleColor" red="0.98217082020000002" green="0.98214149480000001" blue="0.98215812440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="changeEmailButtonPressedWithSender:" destination="o9h-NB-zyk" eventType="touchUpInside" id="Rfw-L5-q19"/>
+                                                        <action selector="emailLoginSignupButtonPressedWithSender:" destination="9Xq-Ig-wy7" eventType="touchUpInside" id="Puc-1L-R4L"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fdB-Lh-aFQ" firstAttribute="leading" secondItem="dk7-VO-zgJ" secondAttribute="leadingMargin" id="2XH-UB-i5W"/>
+                                                <constraint firstItem="fdB-Lh-aFQ" firstAttribute="centerY" secondItem="dk7-VO-zgJ" secondAttribute="centerY" id="Taq-gm-cbh"/>
+                                                <constraint firstItem="fdB-Lh-aFQ" firstAttribute="top" secondItem="dk7-VO-zgJ" secondAttribute="topMargin" constant="-4" id="VgF-Bg-RNo"/>
+                                                <constraint firstItem="fdB-Lh-aFQ" firstAttribute="trailing" secondItem="dk7-VO-zgJ" secondAttribute="trailingMargin" id="iN1-8V-uhF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Password" id="Upj-1f-SVo">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Xdo-Si-yUj">
+                                        <rect key="frame" x="0.0" y="189" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xdo-Si-yUj" id="LOX-Ik-pBI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zUT-tK-TE0" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="h4G-Or-CNj"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zUT-tK-TE0" firstAttribute="centerY" secondItem="LOX-Ik-pBI" secondAttribute="centerY" id="GML-h9-PUY"/>
+                                                <constraint firstItem="zUT-tK-TE0" firstAttribute="leading" secondItem="LOX-Ik-pBI" secondAttribute="leadingMargin" id="lmr-hh-SKr"/>
+                                                <constraint firstItem="zUT-tK-TE0" firstAttribute="trailing" secondItem="LOX-Ik-pBI" secondAttribute="trailingMargin" id="uSR-FF-MSw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cWm-EY-2Si">
+                                        <rect key="frame" x="0.0" y="233" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cWm-EY-2Si" id="GzM-l2-plC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-TY-F4h" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="XFQ-Vr-jm6"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1RP-TY-F4h" firstAttribute="trailing" secondItem="GzM-l2-plC" secondAttribute="trailingMargin" id="9rJ-B8-c43"/>
+                                                <constraint firstItem="1RP-TY-F4h" firstAttribute="leading" secondItem="GzM-l2-plC" secondAttribute="leadingMargin" id="V0y-es-SQd"/>
+                                                <constraint firstItem="1RP-TY-F4h" firstAttribute="centerY" secondItem="GzM-l2-plC" secondAttribute="centerY" id="u6r-y8-cO9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ngc-xm-bep">
+                                        <rect key="frame" x="0.0" y="277" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ngc-xm-bep" id="ZSC-al-6ah">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KTJ-mM-tIj" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="anv-HI-ybr"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KTJ-mM-tIj" firstAttribute="centerY" secondItem="ZSC-al-6ah" secondAttribute="centerY" id="JpM-6N-Enl"/>
+                                                <constraint firstItem="KTJ-mM-tIj" firstAttribute="leading" secondItem="ZSC-al-6ah" secondAttribute="leadingMargin" id="KYv-oa-4Lh"/>
+                                                <constraint firstItem="KTJ-mM-tIj" firstAttribute="trailing" secondItem="ZSC-al-6ah" secondAttribute="trailingMargin" id="zwd-JW-fFk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="n9B-JT-bCa">
+                                        <rect key="frame" x="0.0" y="321" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9B-JT-bCa" id="g00-x3-2g8">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-th-35X" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <state key="normal" title="Change Password">
+                                                        <color key="titleColor" red="0.98217082020000002" green="0.98214149480000001" blue="0.98215812440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="changePasswordButtonPressedWithSender:" destination="o9h-NB-zyk" eventType="touchUpInside" id="iYY-W6-GrB"/>
+                                                        <action selector="emailLoginSignupButtonPressedWithSender:" destination="9Xq-Ig-wy7" eventType="touchUpInside" id="ClD-Lr-2Vv"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Kai-th-35X" firstAttribute="leading" secondItem="g00-x3-2g8" secondAttribute="leading" constant="8" id="VKp-cH-95A"/>
+                                                <constraint firstAttribute="bottom" secondItem="Kai-th-35X" secondAttribute="bottom" constant="4" id="acl-fv-VX4"/>
+                                                <constraint firstItem="Kai-th-35X" firstAttribute="top" secondItem="g00-x3-2g8" secondAttribute="top" constant="5" id="b55-Gf-Ha7"/>
+                                                <constraint firstAttribute="trailing" secondItem="Kai-th-35X" secondAttribute="trailing" constant="8" id="yV4-9P-IIi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Facebook" id="tOE-co-YGU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="hAY-dH-qiR">
+                                        <rect key="frame" x="0.0" y="393" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hAY-dH-qiR" id="BNe-cy-Sgi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Facebook Account" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61y-zx-dvi" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="IR5-HT-T86"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="61y-zx-dvi" firstAttribute="leading" secondItem="BNe-cy-Sgi" secondAttribute="leadingMargin" id="JBM-vC-1Nc"/>
+                                                <constraint firstItem="61y-zx-dvi" firstAttribute="centerY" secondItem="BNe-cy-Sgi" secondAttribute="centerY" id="Jwg-eB-ALS"/>
+                                                <constraint firstItem="61y-zx-dvi" firstAttribute="trailing" secondItem="BNe-cy-Sgi" secondAttribute="trailingMargin" id="XqO-uo-EPK"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="51A-w8-ycu">
+                                        <rect key="frame" x="0.0" y="437" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="51A-w8-ycu" id="1N9-0Q-nL3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgf-eF-dWr" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <state key="normal" title="Unlink Facebook account">
+                                                        <color key="titleColor" red="0.98217082020000002" green="0.98214149480000001" blue="0.98215812440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="emailLoginSignupButtonPressedWithSender:" destination="9Xq-Ig-wy7" eventType="touchUpInside" id="L3l-wj-c2h"/>
+                                                        <action selector="fbAccountButtonPressedWithSender:" destination="o9h-NB-zyk" eventType="touchUpInside" id="PgF-2S-5Fe"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Sgf-eF-dWr" firstAttribute="leading" secondItem="1N9-0Q-nL3" secondAttribute="leadingMargin" id="5v5-dU-H8v"/>
+                                                <constraint firstItem="Sgf-eF-dWr" firstAttribute="trailing" secondItem="1N9-0Q-nL3" secondAttribute="trailingMargin" id="Gd6-j7-Ojo"/>
+                                                <constraint firstItem="Sgf-eF-dWr" firstAttribute="top" secondItem="1N9-0Q-nL3" secondAttribute="topMargin" constant="-3" id="Gqa-o4-NAt"/>
+                                                <constraint firstItem="Sgf-eF-dWr" firstAttribute="centerY" secondItem="1N9-0Q-nL3" secondAttribute="centerY" id="enq-et-nSj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Account" id="3SN-QB-9vI">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="dff-2b-EXt">
+                                        <rect key="frame" x="0.0" y="509" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dff-2b-EXt" id="s1L-Eq-Jgm">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJZ-E4-4qu" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
+                                                    <color key="backgroundColor" red="0.8862745098" green="0.023529411760000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                    <state key="normal" title="Delete Account">
+                                                        <color key="titleColor" red="0.98217082020000002" green="0.98214149480000001" blue="0.98215812440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteAccountButtonPressedWithSender:" destination="o9h-NB-zyk" eventType="touchUpInside" id="bpw-7L-v6b"/>
+                                                        <action selector="emailLoginSignupButtonPressedWithSender:" destination="9Xq-Ig-wy7" eventType="touchUpInside" id="kbc-EU-0tQ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JJZ-E4-4qu" firstAttribute="leading" secondItem="s1L-Eq-Jgm" secondAttribute="leadingMargin" id="BCU-8i-uee"/>
+                                                <constraint firstItem="JJZ-E4-4qu" firstAttribute="trailing" secondItem="s1L-Eq-Jgm" secondAttribute="trailingMargin" id="Dgw-Wb-E8c"/>
+                                                <constraint firstItem="JJZ-E4-4qu" firstAttribute="top" secondItem="s1L-Eq-Jgm" secondAttribute="topMargin" constant="-3" id="Ze4-ue-NZl"/>
+                                                <constraint firstItem="JJZ-E4-4qu" firstAttribute="centerY" secondItem="s1L-Eq-Jgm" secondAttribute="centerY" id="mlB-ai-YeA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="o9h-NB-zyk" id="Kze-oy-ubg"/>
+                            <outlet property="delegate" destination="o9h-NB-zyk" id="i4V-2F-oQ4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="B9L-8f-lPe">
+                        <barButtonItem key="rightBarButtonItem" image="LogOut" id="6uY-NS-dcf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logOutButtonPressedWithSender:" destination="o9h-NB-zyk" id="VKK-VD-ryD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="KTJ-mM-tIj" id="Cj4-b4-qd4"/>
+                        <outlet property="currentEmailTextField" destination="Stx-LN-Z7L" id="SB2-Br-zUI"/>
+                        <outlet property="currentPasswordTextField" destination="zUT-tK-TE0" id="bDC-60-FaC"/>
+                        <outlet property="fbAccountButton" destination="Sgf-eF-dWr" id="xbq-nP-xLR"/>
+                        <outlet property="fbAccountTextField" destination="61y-zx-dvi" id="vlu-hA-BlW"/>
+                        <outlet property="newEmailTextField" destination="Awr-vm-jo4" id="Ya4-AX-hGD"/>
+                        <outlet property="newPasswordTextField" destination="1RP-TY-F4h" id="hGw-YA-NK3"/>
+                        <segue destination="MVt-xo-bKp" kind="show" identifier="loggedInSegue" id="7Lb-tW-tRi"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MoQ-I7-JDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="116"/>
+        </scene>
+        <!--My Storage-->
+        <scene sceneID="64J-bw-n2a">
+            <objects>
+                <tableViewController id="3ig-Rk-NiM" customClass="StorageVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0SF-XO-Cah">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="StorageCellId" rowHeight="206" id="mOi-3O-BCf" customClass="AlbumsTableViewCell" customModule="MyFBAlbums" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="206"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mOi-3O-BCf" id="jjE-PL-oNy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="205.66666666666666"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-sx-Rgh">
+                                            <rect key="frame" x="8" y="8" width="359" height="190"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-zE-14e">
+                                            <rect key="frame" x="46" y="84" width="283" height="37"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="highlightedColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="shadowColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <size key="shadowOffset" width="1" height="1"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ZlT-zE-14e" firstAttribute="leading" secondItem="jjE-PL-oNy" secondAttribute="leadingMargin" constant="38" id="6DI-g3-3vX"/>
+                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="centerY" secondItem="jjE-PL-oNy" secondAttribute="centerY" id="7tk-V0-qc5"/>
+                                        <constraint firstItem="ZlT-zE-14e" firstAttribute="centerY" secondItem="6Om-sx-Rgh" secondAttribute="centerY" id="9KU-y9-Ydy"/>
+                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="leading" secondItem="jjE-PL-oNy" secondAttribute="leadingMargin" id="ZUH-nr-cda"/>
+                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="top" secondItem="jjE-PL-oNy" secondAttribute="topMargin" id="gyC-hc-ssG"/>
+                                        <constraint firstItem="ZlT-zE-14e" firstAttribute="centerX" secondItem="jjE-PL-oNy" secondAttribute="centerX" id="l37-sw-RVY"/>
+                                        <constraint firstItem="ZlT-zE-14e" firstAttribute="centerX" secondItem="6Om-sx-Rgh" secondAttribute="centerX" id="sJN-Tg-FBR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="albumCoverImageView" destination="6Om-sx-Rgh" id="brq-6D-11M"/>
+                                    <outlet property="albumTitleLabel" destination="ZlT-zE-14e" id="uco-HL-IkF"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3ig-Rk-NiM" id="jit-Br-te7"/>
+                            <outlet property="delegate" destination="3ig-Rk-NiM" id="Uoc-WI-asJ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="My Storage" image="Storage" id="Emb-Se-qBG">
+                        <color key="badgeColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBarItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="az2-7h-Xc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3241" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Guo-1Z-yqc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MVt-xo-bKp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MgK-sK-XIe">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.22352941179999999" green="0.33725490200000002" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="L1f-7z-ruz" kind="relationship" relationship="rootViewController" id="1bx-yQ-J2t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3c2-pw-Ku7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="-654"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="jmC-Np-M9b">
+            <objects>
+                <viewController id="9Xq-Ig-wy7" customClass="LoginVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DfU-vR-9FX"/>
+                        <viewControllerLayoutGuide type="bottom" id="QSi-VT-FUf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TzO-Vq-ss3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1q7-IA-wmQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="136"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In / Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMY-lh-kW3">
+                                        <rect key="frame" x="88.333333333333343" y="52" width="198.66666666666666" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="fQH-UX-xu3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" red="0.98217082020000002" green="0.98214149480000001" blue="0.98215812440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1q7-IA-wmQ" secondAttribute="height" multiplier="69:25" id="1je-Bf-B0o"/>
+                                    <constraint firstItem="PMY-lh-kW3" firstAttribute="top" secondItem="1q7-IA-wmQ" secondAttribute="topMargin" id="2Tg-hy-Ypn"/>
+                                    <constraint firstItem="PMY-lh-kW3" firstAttribute="centerX" secondItem="1q7-IA-wmQ" secondAttribute="centerX" id="8rW-Ct-Gqr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bN-fs-TGM" customClass="View" customModule="MyFBAlbums" customModuleProvider="target">
+                                <rect key="frame" x="16" y="108" width="343" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="r3v-lS-yb0">
+                                        <rect key="frame" x="20" y="10" width="303" height="108"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FbLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-0L-a1H">
+                                                <rect key="frame" x="0.0" y="21.666666666666657" width="65" height="65"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="65" id="LJe-Pz-Q25"/>
+                                                    <constraint firstAttribute="width" constant="65" id="Uuz-zp-G2l"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iq4-R7-Dhl" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
+                                                <rect key="frame" x="105" y="39" width="198" height="30"/>
+                                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="33" id="IV7-Sy-l4g"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                                <state key="normal" title="FACEBOOK LOGIN">
+                                                    <color key="titleColor" red="0.98217082020000002" green="0.98214149480000001" blue="0.98215812440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="IV7-Sy-l4g"/>
+                                                    </mask>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="facebookLoginButtonPressedWithSender:" destination="9Xq-Ig-wy7" eventType="touchUpInside" id="5H6-8Z-fC7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="r3v-lS-yb0" secondAttribute="trailing" constant="20" id="0HD-PZ-BkE"/>
+                                    <constraint firstItem="r3v-lS-yb0" firstAttribute="centerY" secondItem="6bN-fs-TGM" secondAttribute="centerY" id="DID-RY-2nc"/>
+                                    <constraint firstItem="r3v-lS-yb0" firstAttribute="centerX" secondItem="6bN-fs-TGM" secondAttribute="centerX" id="Kxc-JA-zzv"/>
+                                    <constraint firstAttribute="bottom" secondItem="r3v-lS-yb0" secondAttribute="bottom" constant="10" id="Njd-Tf-eIs"/>
+                                    <constraint firstAttribute="height" constant="128" id="TgM-7U-nzw"/>
+                                    <constraint firstItem="r3v-lS-yb0" firstAttribute="leading" secondItem="6bN-fs-TGM" secondAttribute="leadingMargin" constant="20" id="XUz-Wo-zjZ"/>
+                                    <constraint firstItem="r3v-lS-yb0" firstAttribute="leading" secondItem="6bN-fs-TGM" secondAttribute="leading" constant="20" id="aVS-LR-MTS"/>
+                                    <constraint firstItem="r3v-lS-yb0" firstAttribute="top" secondItem="6bN-fs-TGM" secondAttribute="top" constant="10" id="g0e-CW-wLx"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="r3v-lS-yb0" secondAttribute="trailing" constant="20" id="kyd-0L-SZ1"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="DID-RY-2nc"/>
+                                        <exclude reference="Kxc-JA-zzv"/>
+                                        <exclude reference="XUz-Wo-zjZ"/>
+                                        <exclude reference="kyd-0L-SZ1"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dfk-4K-Xpd" customClass="View" customModule="MyFBAlbums" customModuleProvider="target">
+                                <rect key="frame" x="16" y="256" width="343" height="502"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Login / Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzX-YA-N0J">
+                                        <rect key="frame" x="20" y="20" width="303" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="W7W-5h-8DN"/>
+                                            <constraint firstAttribute="height" constant="24" id="yx5-GP-sfC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="W7W-5h-8DN"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4wq-2T-GJD" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="64" width="303" height="35"/>
+                                        <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="dCQ-QD-4Ra"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRk-we-gBg" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="119" width="303" height="35"/>
+                                        <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="kUK-Yi-5SP"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVc-Es-f1B" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
+                                        <rect key="frame" x="81.666666666666686" y="174" width="180" height="35"/>
+                                        <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="2wG-1q-QXh"/>
+                                            <constraint firstAttribute="height" constant="35" id="hFb-Dd-oTO"/>
+                                            <constraint firstAttribute="height" constant="33" id="pEa-ua-gPq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" title="Login / Sign up">
+                                            <color key="titleColor" red="0.98217082020000002" green="0.98214149480000001" blue="0.98215812440000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="pEa-ua-gPq"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="emailLoginSignupButtonPressedWithSender:" destination="9Xq-Ig-wy7" eventType="touchUpInside" id="YJw-EI-2bi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4wq-2T-GJD" secondAttribute="trailing" constant="20" id="2ZN-X0-FPh"/>
+                                    <constraint firstItem="nVc-Es-f1B" firstAttribute="top" secondItem="DRk-we-gBg" secondAttribute="bottom" constant="20" id="7pd-CB-CNt"/>
+                                    <constraint firstAttribute="height" constant="128" id="Bf5-vT-Cbm"/>
+                                    <constraint firstItem="RzX-YA-N0J" firstAttribute="leading" secondItem="Dfk-4K-Xpd" secondAttribute="leading" constant="20" id="GoB-Pi-YR4"/>
+                                    <constraint firstItem="RzX-YA-N0J" firstAttribute="top" secondItem="Dfk-4K-Xpd" secondAttribute="top" constant="20" id="Kmq-Il-6e8"/>
+                                    <constraint firstItem="RzX-YA-N0J" firstAttribute="centerX" secondItem="Dfk-4K-Xpd" secondAttribute="centerX" id="LIv-gD-2VV"/>
+                                    <constraint firstItem="4wq-2T-GJD" firstAttribute="leading" secondItem="RzX-YA-N0J" secondAttribute="leading" id="SIp-i1-6uy"/>
+                                    <constraint firstItem="nVc-Es-f1B" firstAttribute="centerX" secondItem="Dfk-4K-Xpd" secondAttribute="centerX" id="SZU-p4-6nl"/>
+                                    <constraint firstItem="4wq-2T-GJD" firstAttribute="top" secondItem="RzX-YA-N0J" secondAttribute="bottom" constant="20" id="dV7-5q-Axf"/>
+                                    <constraint firstItem="DRk-we-gBg" firstAttribute="top" secondItem="4wq-2T-GJD" secondAttribute="bottom" constant="20" id="ght-Vh-V2U"/>
+                                    <constraint firstItem="DRk-we-gBg" firstAttribute="leading" secondItem="4wq-2T-GJD" secondAttribute="leading" id="ogJ-Gq-K4F"/>
+                                    <constraint firstAttribute="trailing" secondItem="DRk-we-gBg" secondAttribute="trailing" constant="20" id="slA-6f-jEk"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Bf5-vT-Cbm"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.72156862745098038" green="0.77647058823529413" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6bN-fs-TGM" firstAttribute="trailing" secondItem="TzO-Vq-ss3" secondAttribute="trailingMargin" id="8nb-7Z-NBj"/>
+                            <constraint firstItem="QSi-VT-FUf" firstAttribute="top" secondItem="Dfk-4K-Xpd" secondAttribute="bottom" constant="20" id="FEj-jF-eRk"/>
+                            <constraint firstItem="Dfk-4K-Xpd" firstAttribute="top" secondItem="6bN-fs-TGM" secondAttribute="bottom" constant="20" id="G4y-SS-q69"/>
+                            <constraint firstItem="1q7-IA-wmQ" firstAttribute="trailing" secondItem="af6-Zy-jDG" secondAttribute="trailing" id="SqD-6V-giu"/>
+                            <constraint firstItem="Dfk-4K-Xpd" firstAttribute="trailing" secondItem="TzO-Vq-ss3" secondAttribute="trailingMargin" id="Y01-Ge-ZBY"/>
+                            <constraint firstItem="6bN-fs-TGM" firstAttribute="leading" secondItem="TzO-Vq-ss3" secondAttribute="leadingMargin" id="YYw-pb-o9y"/>
+                            <constraint firstItem="Dfk-4K-Xpd" firstAttribute="leading" secondItem="TzO-Vq-ss3" secondAttribute="leadingMargin" id="bAp-fQ-cqo"/>
+                            <constraint firstItem="1q7-IA-wmQ" firstAttribute="centerX" secondItem="TzO-Vq-ss3" secondAttribute="centerX" id="f8g-hE-WFb"/>
+                            <constraint firstItem="6bN-fs-TGM" firstAttribute="top" secondItem="DfU-vR-9FX" secondAttribute="bottom" constant="64" id="o9Y-wy-oD3"/>
+                            <constraint firstItem="1q7-IA-wmQ" firstAttribute="leading" secondItem="af6-Zy-jDG" secondAttribute="leading" id="ozO-NW-S9Y"/>
+                            <constraint firstItem="1q7-IA-wmQ" firstAttribute="top" secondItem="TzO-Vq-ss3" secondAttribute="top" id="tOX-Qa-6A0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="af6-Zy-jDG"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="4wq-2T-GJD" id="Skf-mK-Xiw"/>
+                        <outlet property="passwordTextField" destination="DRk-we-gBg" id="Zsm-HE-6j4"/>
+                        <segue destination="MVt-xo-bKp" kind="show" identifier="loggedInSegue" id="Zmu-A8-Y3t"/>
+                        <segue destination="PZC-g9-WPl" kind="show" identifier="loggedInEmailSegue" id="c28-sZ-E5F"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RRb-Jn-aRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1418.840579710145" y="-654.61956521739137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XZA-hp-MQ4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PZC-g9-WPl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0xe-WP-gbr">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="o9h-NB-zyk" kind="relationship" relationship="rootViewController" id="sBO-Aa-t8s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="APh-XQ-FWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1420" y="116"/>
+        </scene>
+        <!--My FB Albums-->
+        <scene sceneID="2ei-uK-IQb">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="L1f-7z-ruz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="My FB Albums" id="8w5-AV-igb">
+                        <barButtonItem key="rightBarButtonItem" image="Settings" id="9Yo-NJ-0Wa">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="o9h-NB-zyk" kind="show" id="LxJ-NR-kkX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Dag-t7-YYb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="SsW-ZE-VT0" kind="relationship" relationship="viewControllers" id="SOf-OQ-2pa"/>
+                        <segue destination="3ig-Rk-NiM" kind="relationship" relationship="viewControllers" id="9YG-qV-iyF"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jcl-yL-Og0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3242" y="-654"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Albums" width="25" height="25"/>
+        <image name="FbLogo" width="200" height="200"/>
+        <image name="LogOut" width="25" height="25"/>
+        <image name="Settings" width="25" height="25"/>
+        <image name="Storage" width="25" height="25"/>
+        <image name="User" width="75" height="75"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zmu-A8-Y3t"/>
+        <segue reference="LxJ-NR-kkX"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
