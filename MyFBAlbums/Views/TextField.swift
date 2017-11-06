@@ -1,5 +1,5 @@
 //
-//  Button.swift
+//  TextField.swift
 //  MyFBAlbums
 //
 //  Created by Home on 30/10/2017.
@@ -9,8 +9,7 @@
 import UIKit
 
 @IBDesignable
-
-class Button: UIButton {
+class TextField: UITextField {
     override func awakeFromNib() {
         setUpView()
     }
@@ -22,9 +21,15 @@ class Button: UIButton {
     
     func setUpView() {
         layer.cornerRadius = 5.0
-        //layer.shadowColor = SHADOW_COLOR
-        //layer.shadowOpacity = 0.5
-        layer.shadowRadius = 2.0
-        layer.shadowOffset = CGSize.init(width: 0.0, height: 2.0)
+        layer.borderColor = BLUE_COLOR.cgColor
+        layer.borderWidth = 1.0
+    }
+    
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds
     }
 }

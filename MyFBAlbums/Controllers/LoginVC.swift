@@ -22,12 +22,12 @@ class LoginVC: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseApp.configure()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if UserDefaults.standard.value(forKey: KEY_UID) != nil {
+        if UserDefaults.standard.value(forKey: FIREBASE_KEY_UID) != nil {
+            FacebookManager.shared.fbAlbumRequest()
             performSegue(withIdentifier: "loggedInSegue", sender: nil)
         }
     }
@@ -39,26 +39,37 @@ class LoginVC: UIViewController {
     // MARK: - Actions
     @IBAction func facebookLoginButtonPressed(sender: UIButton!) {
         let progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
-        let facebookLoginManager = FBSDKLoginManager()
-        facebookLoginManager.logIn(withReadPermissions: ["email"], from: self) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: Error!) -> Void in
-            // If there is no error logging into facebook, get the accessToken string
-            if facebookError != nil {
-                progressHUD.hide(animated: true)
-                SCLAlertView().showError("Facebook login failed", subTitle: facebookError!.localizedDescription)
+        FacebookManager.shared.login(controller: self) { (success, error) in
+            if !success {
+                // Something wrong
+                if let loginError = error {
+                    switch loginError {
+                    case .loginFailed:
+                        // Failed to login with Facebook
+                        progressHUD.hide(animated: true)
+                        SCLAlertView().showError("Facebook login failed", subTitle: error!.localizedDescription)
+                    case .loginCancelled:
+                        // Cancelled login
+                        progressHUD.hide(animated: true)
+                        SCLAlertView().showError("Facebook login cancelled", subTitle: "You have cancelled Facebook login")
+                    case .permissionDenied:
+                        // "user_photos" permission are denied
+                        progressHUD.hide(animated: true)
+                        SCLAlertView().showError("Photo permission", subTitle: "Permission for user's photos are denied")
+                    }
+                }
             } else {
+                // Facebook login success
                 let accessToken = FBSDKAccessToken.current().tokenString
-//                print("Successfully logged into Facebook with accessToken: \(String(describing: accessToken))")
                 let credential = FacebookAuthProvider.credential(withAccessToken: accessToken!)
-                // Authenticate the facebook user to access the firebase app data
                 Auth.auth().signIn(with: credential) { (user, error) in
                     if let error = error {
                         progressHUD.hide(animated: true)
                         SCLAlertView().showError("Facebook login failed", subTitle: error.localizedDescription)
                         return
                     }
-//                    print("Successful login with AuthData: \(String(describing: user))")
-                    UserDefaults.standard.set(user!.uid, forKey: KEY_UID)
-                    // Segue to Logged view
+                    UserDefaults.standard.set(user!.uid, forKey: FIREBASE_KEY_UID)
+                    FacebookManager.shared.fbAlbumRequest()
                     self.performSegue(withIdentifier: "loggedInSegue", sender: nil)
                     progressHUD.hide(animated: true)
                 }
@@ -78,7 +89,7 @@ class LoginVC: UIViewController {
                                 progressHUD.hide(animated: true)
                                 SCLAlertView().showError("Could Not Create Account", subTitle: "There was a problem creating a new user account.")
                             } else {
-                                UserDefaults.standard.setValue(user?.uid, forKey: KEY_UID)
+                                UserDefaults.standard.setValue(user?.uid, forKey: FIREBASE_KEY_UID)
                                 Auth.auth().signIn(withEmail: email, password: password, completion: nil)
                                 self.performSegue(withIdentifier: "loggedInEmailSegue", sender: nil)
                                 progressHUD.hide(animated: true)
@@ -95,7 +106,7 @@ class LoginVC: UIViewController {
                     }
                 } else {
                     // If the user does exist and the password is correct, log the user in.
-                    UserDefaults.standard.setValue(user?.uid, forKey: KEY_UID)
+                    UserDefaults.standard.set(user!.uid, forKey: FIREBASE_KEY_UID)
                     Auth.auth().signIn(withEmail: email, password: password, completion: nil)
                     Auth.auth().fetchProviders(forEmail: email, completion: { (provider, error) in
                         if provider!.description == "facebook.com" {

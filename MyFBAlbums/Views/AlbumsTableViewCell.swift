@@ -16,8 +16,9 @@ class AlbumsTableViewCell: UITableViewCell {
 
     // MARK: - Lifecycle
     override func awakeFromNib() {
+        albumCoverImageView.image = UIImage(named: "DefaultAlbums")
         super.awakeFromNib()
-        self.backgroundColor = .clear
+        self.backgroundColor = WHITE_COLOR
     }
 }
 

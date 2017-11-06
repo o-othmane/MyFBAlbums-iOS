@@ -10,19 +10,26 @@
 		9A6520E93E071C2A03D064E5 /* Pods_MyFBAlbums.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC9ADE5752898CF0B207F853 /* Pods_MyFBAlbums.framework */; };
 		F4078C151FAA326F00306749 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4078C141FAA326F00306749 /* AlbumsTableViewCell.swift */; };
 		F41AC58C1F9D0C5F00EACCC4 /* HexColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41AC58B1F9D0C5F00EACCC4 /* HexColors.swift */; };
-		F444C6E91F9A76DD00FD9D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F444C6E81F9A76DD00FD9D65 /* AppDelegate.swift */; };
-		F444C6EE1F9A76DD00FD9D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F444C6EC1F9A76DD00FD9D65 /* Main.storyboard */; };
-		F444C6F01F9A76DD00FD9D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F444C6EF1F9A76DD00FD9D65 /* Assets.xcassets */; };
-		F444C6F31F9A76DD00FD9D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F444C6F11F9A76DD00FD9D65 /* LaunchScreen.storyboard */; };
 		F45218411FA91A1C00D4AA7C /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45218401FA91A1C00D4AA7C /* SettingsVC.swift */; };
+		F487383B1FAC0EB100656EE5 /* ImagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F487383A1FAC0EB100656EE5 /* ImagesVC.swift */; };
+		F487383D1FAC111D00656EE5 /* ImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F487383C1FAC111D00656EE5 /* ImagesTableViewCell.swift */; };
 		F48912131FA76DC10095F35D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48912121FA76DC10095F35D /* LoginVC.swift */; };
-		F489121D1FA77C5F0095F35D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48912181FA77C5F0095F35D /* Constants.swift */; };
-		F489121F1FA7AB580095F35D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F48912141FA776D90095F35D /* GoogleService-Info.plist */; };
 		F48912211FA7AC820095F35D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48912201FA7AC820095F35D /* TextField.swift */; };
 		F48912231FA7ACC70095F35D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48912221FA7ACC70095F35D /* Button.swift */; };
 		F48912291FA7ADA00095F35D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48912281FA7ADA00095F35D /* View.swift */; };
 		F489122B1FA7B0780095F35D /* AlbumsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F489122A1FA7B0780095F35D /* AlbumsVC.swift */; };
+		F4AA088B1FABD63100320A05 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA088A1FABD63100320A05 /* Notifications.swift */; };
+		F4AA08B91FAC059100320A05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08B21FAC047600320A05 /* Constants.swift */; };
+		F4AA08BA1FAC059600320A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AA08B11FAC047600320A05 /* AppDelegate.swift */; };
+		F4AA08BB1FAC059A00320A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4AA08B31FAC047700320A05 /* Assets.xcassets */; };
+		F4AA08BC1FAC05A400320A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AA08B61FAC048600320A05 /* LaunchScreen.storyboard */; };
+		F4AA08BD1FAC05A800320A05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AA08B41FAC048500320A05 /* Main.storyboard */; };
+		F4AA08BE1FAC05BE00320A05 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AA08AE1FAC047600320A05 /* GoogleService-Info.plist */; };
 		F4BB99511FAA3E79008A2767 /* StorageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BB99501FAA3E79008A2767 /* StorageVC.swift */; };
+		F4CAD4DC1FACAC7400B0730D /* ImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CAD4DB1FACAC7400B0730D /* ImageVC.swift */; };
+		F4DC5BCC1FABA7DC00D20E52 /* AlbumsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC5BCB1FABA7DC00D20E52 /* AlbumsModel.swift */; };
+		F4DC5BCE1FABB9B900D20E52 /* ImagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC5BCD1FABB9B900D20E52 /* ImagesModel.swift */; };
+		F4DC5BD21FABC03500D20E52 /* FacebookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DC5BD11FABC03500D20E52 /* FacebookManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,21 +39,28 @@
 		F4078C141FAA326F00306749 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
 		F41AC58B1F9D0C5F00EACCC4 /* HexColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColors.swift; sourceTree = "<group>"; };
 		F444C6E51F9A76DD00FD9D65 /* MyFBAlbums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFBAlbums.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F444C6E81F9A76DD00FD9D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F444C6ED1F9A76DD00FD9D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F444C6EF1F9A76DD00FD9D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F444C6F21F9A76DD00FD9D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F444C6F41F9A76DD00FD9D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F444C6FA1F9A775B00FD9D65 /* MyFBAlbums.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFBAlbums.entitlements; sourceTree = "<group>"; };
 		F45218401FA91A1C00D4AA7C /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		F487383A1FAC0EB100656EE5 /* ImagesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesVC.swift; sourceTree = "<group>"; };
+		F487383C1FAC111D00656EE5 /* ImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewCell.swift; sourceTree = "<group>"; };
 		F48912121FA76DC10095F35D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
-		F48912141FA776D90095F35D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		F48912181FA77C5F0095F35D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F48912201FA7AC820095F35D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		F48912221FA7ACC70095F35D /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		F48912281FA7ADA00095F35D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		F489122A1FA7B0780095F35D /* AlbumsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsVC.swift; sourceTree = "<group>"; };
+		F4AA088A1FABD63100320A05 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		F4AA08AE1FAC047600320A05 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4AA08B11FAC047600320A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4AA08B21FAC047600320A05 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4AA08B31FAC047700320A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4AA08B51FAC048500320A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4AA08B71FAC048600320A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4BB99501FAA3E79008A2767 /* StorageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageVC.swift; sourceTree = "<group>"; };
+		F4CAD4DB1FACAC7400B0730D /* ImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageVC.swift; sourceTree = "<group>"; };
+		F4CEB55F1FAC080300EEE318 /* MyFBAlbums.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyFBAlbums.entitlements; sourceTree = "<group>"; };
+		F4CEB5611FAC084900EEE318 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4DC5BCB1FABA7DC00D20E52 /* AlbumsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsModel.swift; sourceTree = "<group>"; };
+		F4DC5BCD1FABB9B900D20E52 /* ImagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesModel.swift; sourceTree = "<group>"; };
+		F4DC5BD11FABC03500D20E52 /* FacebookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,25 +113,64 @@
 		F444C6E71F9A76DD00FD9D65 /* MyFBAlbums */ = {
 			isa = PBXGroup;
 			children = (
-				F444C6FA1F9A775B00FD9D65 /* MyFBAlbums.entitlements */,
-				F48912181FA77C5F0095F35D /* Constants.swift */,
+				F4AA088D1FAC000200320A05 /* Models */,
+				F4AA088E1FAC005A00320A05 /* Views */,
+				F4AA088F1FAC00AC00320A05 /* Controllers */,
+				F4AA08B81FAC049C00320A05 /* SupportFiles */,
+			);
+			path = MyFBAlbums;
+			sourceTree = "<group>";
+		};
+		F4AA088D1FAC000200320A05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4AA088A1FABD63100320A05 /* Notifications.swift */,
+				F4DC5BCB1FABA7DC00D20E52 /* AlbumsModel.swift */,
+				F4DC5BCD1FABB9B900D20E52 /* ImagesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4AA088E1FAC005A00320A05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F41AC58B1F9D0C5F00EACCC4 /* HexColors.swift */,
 				F48912281FA7ADA00095F35D /* View.swift */,
 				F48912201FA7AC820095F35D /* TextField.swift */,
 				F48912221FA7ACC70095F35D /* Button.swift */,
-				F444C6E81F9A76DD00FD9D65 /* AppDelegate.swift */,
 				F4078C141FAA326F00306749 /* AlbumsTableViewCell.swift */,
-				F444C6EC1F9A76DD00FD9D65 /* Main.storyboard */,
-				F45218401FA91A1C00D4AA7C /* SettingsVC.swift */,
-				F489122A1FA7B0780095F35D /* AlbumsVC.swift */,
+				F487383C1FAC111D00656EE5 /* ImagesTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F4AA088F1FAC00AC00320A05 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4DC5BD11FABC03500D20E52 /* FacebookManager.swift */,
 				F4BB99501FAA3E79008A2767 /* StorageVC.swift */,
 				F48912121FA76DC10095F35D /* LoginVC.swift */,
-				F41AC58B1F9D0C5F00EACCC4 /* HexColors.swift */,
-				F444C6EF1F9A76DD00FD9D65 /* Assets.xcassets */,
-				F444C6F11F9A76DD00FD9D65 /* LaunchScreen.storyboard */,
-				F444C6F41F9A76DD00FD9D65 /* Info.plist */,
-				F48912141FA776D90095F35D /* GoogleService-Info.plist */,
+				F45218401FA91A1C00D4AA7C /* SettingsVC.swift */,
+				F489122A1FA7B0780095F35D /* AlbumsVC.swift */,
+				F487383A1FAC0EB100656EE5 /* ImagesVC.swift */,
+				F4CAD4DB1FACAC7400B0730D /* ImageVC.swift */,
 			);
-			path = MyFBAlbums;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F4AA08B81FAC049C00320A05 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F4AA08B11FAC047600320A05 /* AppDelegate.swift */,
+				F4AA08B21FAC047600320A05 /* Constants.swift */,
+				F4AA08B41FAC048500320A05 /* Main.storyboard */,
+				F4AA08B61FAC048600320A05 /* LaunchScreen.storyboard */,
+				F4AA08B31FAC047700320A05 /* Assets.xcassets */,
+				F4AA08AE1FAC047600320A05 /* GoogleService-Info.plist */,
+				F4CEB5611FAC084900EEE318 /* Info.plist */,
+				F4CEB55F1FAC080300EEE318 /* MyFBAlbums.entitlements */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,10 +240,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F444C6F31F9A76DD00FD9D65 /* LaunchScreen.storyboard in Resources */,
-				F489121F1FA7AB580095F35D /* GoogleService-Info.plist in Resources */,
-				F444C6F01F9A76DD00FD9D65 /* Assets.xcassets in Resources */,
-				F444C6EE1F9A76DD00FD9D65 /* Main.storyboard in Resources */,
+				F4AA08BD1FAC05A800320A05 /* Main.storyboard in Resources */,
+				F4AA08BE1FAC05BE00320A05 /* GoogleService-Info.plist in Resources */,
+				F4AA08BB1FAC059A00320A05 /* Assets.xcassets in Resources */,
+				F4AA08BC1FAC05A400320A05 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,14 +329,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				F48912291FA7ADA00095F35D /* View.swift in Sources */,
+				F4DC5BCC1FABA7DC00D20E52 /* AlbumsModel.swift in Sources */,
 				F41AC58C1F9D0C5F00EACCC4 /* HexColors.swift in Sources */,
-				F444C6E91F9A76DD00FD9D65 /* AppDelegate.swift in Sources */,
+				F4AA08BA1FAC059600320A05 /* AppDelegate.swift in Sources */,
 				F48912211FA7AC820095F35D /* TextField.swift in Sources */,
 				F48912131FA76DC10095F35D /* LoginVC.swift in Sources */,
 				F489122B1FA7B0780095F35D /* AlbumsVC.swift in Sources */,
+				F4DC5BD21FABC03500D20E52 /* FacebookManager.swift in Sources */,
+				F4CAD4DC1FACAC7400B0730D /* ImageVC.swift in Sources */,
+				F487383B1FAC0EB100656EE5 /* ImagesVC.swift in Sources */,
 				F48912231FA7ACC70095F35D /* Button.swift in Sources */,
+				F4DC5BCE1FABB9B900D20E52 /* ImagesModel.swift in Sources */,
+				F4AA088B1FABD63100320A05 /* Notifications.swift in Sources */,
 				F4078C151FAA326F00306749 /* AlbumsTableViewCell.swift in Sources */,
-				F489121D1FA77C5F0095F35D /* Constants.swift in Sources */,
+				F4AA08B91FAC059100320A05 /* Constants.swift in Sources */,
+				F487383D1FAC111D00656EE5 /* ImagesTableViewCell.swift in Sources */,
 				F4BB99511FAA3E79008A2767 /* StorageVC.swift in Sources */,
 				F45218411FA91A1C00D4AA7C /* SettingsVC.swift in Sources */,
 			);
@@ -292,18 +352,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F444C6EC1F9A76DD00FD9D65 /* Main.storyboard */ = {
+		F4AA08B41FAC048500320A05 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F444C6ED1F9A76DD00FD9D65 /* Base */,
+				F4AA08B51FAC048500320A05 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		F444C6F11F9A76DD00FD9D65 /* LaunchScreen.storyboard */ = {
+		F4AA08B61FAC048600320A05 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F444C6F21F9A76DD00FD9D65 /* Base */,
+				F4AA08B71FAC048600320A05 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -423,10 +483,10 @@
 			baseConfigurationReference = 68E298D1B7BD057CBB55934A /* Pods-MyFBAlbums.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MyFBAlbums/MyFBAlbums.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MyFBAlbums/SupportFiles/MyFBAlbums.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ESJ858MJ78;
-				INFOPLIST_FILE = MyFBAlbums/Info.plist;
+				INFOPLIST_FILE = MyFBAlbums/SupportFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.OthmaneOuenzar.MyFBAlbums;
@@ -442,10 +502,10 @@
 			baseConfigurationReference = 6599296FF82DEA01DCFDC127 /* Pods-MyFBAlbums.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MyFBAlbums/MyFBAlbums.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MyFBAlbums/SupportFiles/MyFBAlbums.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ESJ858MJ78;
-				INFOPLIST_FILE = MyFBAlbums/Info.plist;
+				INFOPLIST_FILE = MyFBAlbums/SupportFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.OthmaneOuenzar.MyFBAlbums;

@@ -55,7 +55,8 @@ class SettingsVC: UITableViewController {
     
     // MARK: - Actions
     @IBAction func logOutButtonPressed(sender: UIButton) {
-        UserDefaults.standard.removeObject(forKey: KEY_UID)
+        UserDefaults.standard.removeObject(forKey: FIREBASE_KEY_UID)
+        FacebookManager.shared.logout()
         let progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
         dismiss(animated: true, completion: nil)
         progressHUD.hide(animated: true)
@@ -145,7 +146,7 @@ class SettingsVC: UITableViewController {
                     }
                 })
             })
-            alert.showWarning("Unlink Facebook account", subTitle: "Are you sure to unlink your Facebook account")
+            alert.showWarning("Unlink Facebook account", subTitle: "Are you sure to unlink your Facebook account", closeButtonTitle: "Non")
         } else {
             let facebookLoginManager = FBSDKLoginManager()
             facebookLoginManager.logIn(withReadPermissions: ["email"], from: self) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError: Error!) -> Void in
@@ -162,7 +163,7 @@ class SettingsVC: UITableViewController {
                             return
                         } else {
                             progressHUD.hide(animated: true)
-                            UserDefaults.standard.set(user!.uid, forKey: KEY_UID)
+                            UserDefaults.standard.set(user!.uid, forKey: FIREBASE_KEY_UID)
                             self.performSegue(withIdentifier: "loggedInSegue", sender: nil)
                             self.fbAccountTextField.text = self.currentUser!.displayName
                             self.fbAccountButton.titleLabel!.text = "Unlink Facebook account"
@@ -190,6 +191,6 @@ class SettingsVC: UITableViewController {
             })
                 
             })
-        alert.showWarning("Unlink Facebook account", subTitle: "Are you sure to unlink your Facebook account")
+        alert.showWarning("Unlink Facebook account", subTitle: "Are you sure to delete your account", closeButtonTitle: "Non")
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Xq-Ig-wy7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Xq-Ig-wy7">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,7 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,8 +22,8 @@
             <objects>
                 <viewController id="SsW-ZE-VT0" customClass="AlbumsVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LcX-j4-3C2"/>
-                        <viewControllerLayoutGuide type="bottom" id="V8I-Mx-mvv"/>
+                        <viewControllerLayoutGuide type="top" id="9yC-Qi-ZVD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rsn-BA-M9B"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pIX-uO-sp9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
@@ -32,22 +31,26 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="206" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="23a-TM-gHL">
                                 <rect key="frame" x="0.0" y="223" width="375" height="506"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="separatorColor" red="0.22352941179999999" green="0.33725490200000002" blue="0.60784313729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.77647058820000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" red="0.72156862749999995" green="0.77647058820000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="AlbumCoverCellId" rowHeight="206" id="s7V-rk-IEo" customClass="AlbumsTableViewCell" customModule="MyFBAlbums" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="206"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="AlbumCoverCellId" rowHeight="202" id="s7V-rk-IEo" customClass="AlbumsTableViewCell" customModule="MyFBAlbums" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="202"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="s7V-rk-IEo" id="Mos-Ji-Xo2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="205.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="201.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-Ka-DTt">
-                                                    <rect key="frame" x="8" y="8" width="359" height="190"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="DefaultAlbums" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-Ka-DTt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="201.66666666666666"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdZ-Xc-Qur">
-                                                    <rect key="frame" x="46" y="84" width="283" height="37"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdZ-Xc-Qur">
+                                                    <rect key="frame" x="106.33333333333334" y="44" width="162.66666666666666" height="113"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="xdZ-Xc-Qur" secondAttribute="height" multiplier="283:37" constant="-703.67567567567562" id="TdS-8E-mB1"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="highlightedColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -56,19 +59,17 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="top" secondItem="Mos-Ji-Xo2" secondAttribute="topMargin" id="6D2-xp-0mP"/>
-                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="leading" secondItem="Mos-Ji-Xo2" secondAttribute="leadingMargin" id="Hsd-vc-Kch"/>
-                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="centerX" secondItem="vdL-Ka-DTt" secondAttribute="centerX" id="O2e-wD-n4G"/>
-                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="leading" secondItem="Mos-Ji-Xo2" secondAttribute="leadingMargin" constant="38" id="Pgn-Hd-eTl"/>
-                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="centerY" secondItem="vdL-Ka-DTt" secondAttribute="centerY" id="Rkr-AQ-7LD"/>
-                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="centerY" secondItem="Mos-Ji-Xo2" secondAttribute="centerY" id="dfh-wd-WIo"/>
-                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="centerX" secondItem="Mos-Ji-Xo2" secondAttribute="centerX" id="f9X-iW-k2h"/>
+                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="top" secondItem="Mos-Ji-Xo2" secondAttribute="top" id="A4w-CY-ekM"/>
+                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="leading" secondItem="Mos-Ji-Xo2" secondAttribute="leading" id="CeJ-av-Bzu"/>
+                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="centerY" secondItem="Mos-Ji-Xo2" secondAttribute="centerY" id="Jyh-ci-FEI"/>
+                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="centerX" secondItem="xdZ-Xc-Qur" secondAttribute="centerX" id="XcB-yo-Owh"/>
+                                                <constraint firstItem="xdZ-Xc-Qur" firstAttribute="centerX" secondItem="Mos-Ji-Xo2" secondAttribute="centerX" id="lVd-1f-yJ9"/>
+                                                <constraint firstItem="vdL-Ka-DTt" firstAttribute="centerY" secondItem="xdZ-Xc-Qur" secondAttribute="centerY" id="vmh-he-udu"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="albumCoverImageView" destination="vdL-Ka-DTt" id="UWs-Gc-J2w"/>
                                             <outlet property="albumTitleLabel" destination="xdZ-Xc-Qur" id="wt2-AZ-hQc"/>
-                                            <segue destination="ACk-37-UWi" kind="show" id="fza-ev-Ma0"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -97,15 +98,14 @@
                             <constraint firstItem="q1n-y7-DEA" firstAttribute="centerX" secondItem="pIX-uO-sp9" secondAttribute="centerX" id="1yX-Od-gg0"/>
                             <constraint firstItem="5CA-tO-fds" firstAttribute="top" secondItem="q1n-y7-DEA" secondAttribute="bottom" constant="3" id="CG2-nc-cc3"/>
                             <constraint firstItem="23a-TM-gHL" firstAttribute="centerX" secondItem="pIX-uO-sp9" secondAttribute="centerX" id="HVK-Ez-RuK"/>
-                            <constraint firstItem="q1n-y7-DEA" firstAttribute="top" secondItem="LcX-j4-3C2" secondAttribute="bottom" constant="18" id="Hdf-Qb-wst"/>
+                            <constraint firstItem="q1n-y7-DEA" firstAttribute="top" secondItem="9yC-Qi-ZVD" secondAttribute="bottom" constant="18" id="Hdf-Qb-wst"/>
                             <constraint firstItem="5CA-tO-fds" firstAttribute="centerX" secondItem="pIX-uO-sp9" secondAttribute="centerX" id="P5x-hb-mA4"/>
-                            <constraint firstItem="23a-TM-gHL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d0k-Ov-kLM" secondAttribute="leading" id="Tq7-gP-iFY"/>
-                            <constraint firstItem="V8I-Mx-mvv" firstAttribute="top" secondItem="23a-TM-gHL" secondAttribute="bottom" id="Uix-Te-yTN"/>
-                            <constraint firstItem="23a-TM-gHL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d0k-Ov-kLM" secondAttribute="trailing" id="bPu-5W-tNo"/>
+                            <constraint firstItem="23a-TM-gHL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pIX-uO-sp9" secondAttribute="leading" id="Tq7-gP-iFY"/>
+                            <constraint firstItem="Rsn-BA-M9B" firstAttribute="top" secondItem="23a-TM-gHL" secondAttribute="bottom" id="Uix-Te-yTN"/>
+                            <constraint firstItem="23a-TM-gHL" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pIX-uO-sp9" secondAttribute="trailing" id="bPu-5W-tNo"/>
                             <constraint firstItem="5CA-tO-fds" firstAttribute="top" secondItem="q1n-y7-DEA" secondAttribute="bottom" constant="3" id="fb4-jD-y3H"/>
                             <constraint firstItem="23a-TM-gHL" firstAttribute="top" secondItem="5CA-tO-fds" secondAttribute="bottom" constant="15" id="uAK-Nf-Qzt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="d0k-Ov-kLM"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Albums" image="Albums" id="aJ8-ZL-xWQ">
                         <color key="badgeColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,50 +121,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6k4-5h-fCG" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4118" y="-654"/>
+            <point key="canvasLocation" x="4116" y="-655.41871921182269"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="ylN-QC-BIL">
+        <!--ImagesVC-->
+        <scene sceneID="KtY-Hp-A2R">
             <objects>
-                <collectionViewController id="ACk-37-UWi" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bm4-iR-uWJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                <viewController storyboardIdentifier="ImagesVC" id="gwh-SR-XhJ" customClass="ImagesVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aaO-UU-n5Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="jfR-q4-gBv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cMe-sp-EgF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V39-sD-Z36">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.77647058820000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fO2-Cw-ffM">
+                                    <size key="itemSize" width="169" height="165"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumImageCellId" id="zrV-a4-L8Y" customClass="ImagesTableViewCell" customModule="MyFBAlbums" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4jX-0Q-x5z">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="100" height="100"/>
+                                        <connections>
+                                            <outlet property="img" destination="4jX-0Q-x5z" id="EUi-8Q-6Nb"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="gwh-SR-XhJ" id="ERh-1w-N2K"/>
+                                    <outlet property="delegate" destination="gwh-SR-XhJ" id="YOS-TN-XCl"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fWr-bQ-i5r">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumImageCellId" id="X0C-Xa-ZZP">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <size key="customSize" width="100" height="100"/>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="ACk-37-UWi" id="bft-v6-6kj"/>
-                            <outlet property="delegate" destination="ACk-37-UWi" id="1EL-4k-cuj"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fzy-9s-jkd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="V39-sD-Z36" secondAttribute="bottom" id="FhO-Yq-iLj"/>
+                            <constraint firstAttribute="trailing" secondItem="V39-sD-Z36" secondAttribute="trailing" id="Gir-Eo-Pku"/>
+                            <constraint firstItem="V39-sD-Z36" firstAttribute="top" secondItem="aaO-UU-n5Q" secondAttribute="bottom" id="adX-bF-KUC"/>
+                            <constraint firstItem="V39-sD-Z36" firstAttribute="leading" secondItem="cMe-sp-EgF" secondAttribute="leading" id="fhu-ay-H3v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="FvX-G6-s0d"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="imagesCollection" destination="V39-sD-Z36" id="mb5-u9-HjF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIl-dP-yeZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5012" y="-654"/>
+            <point key="canvasLocation" x="4116" y="114.53201970443351"/>
         </scene>
         <!--Settings-->
         <scene sceneID="mNV-Ke-cIj">
             <objects>
                 <tableViewController id="o9h-NB-zyk" customClass="SettingsVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VXo-bA-Kii">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="45" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VXo-bA-Kii">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -200,14 +228,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="mrF-RD-hA6">
-                                        <rect key="frame" x="0.0" y="73" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="73" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mrF-RD-hA6" id="jhc-UQ-bGA">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Awr-vm-jo4" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -226,14 +254,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="DXo-Df-ZOG">
-                                        <rect key="frame" x="0.0" y="117" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="118" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXo-Df-ZOG" id="dk7-VO-zgJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdB-Lh-aFQ" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <rect key="frame" x="8" y="4" width="359" height="37"/>
                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                     <state key="normal" title="Change Email Address">
@@ -258,14 +286,14 @@
                             <tableViewSection headerTitle="Password" id="Upj-1f-SVo">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Xdo-Si-yUj">
-                                        <rect key="frame" x="0.0" y="189" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="191" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xdo-Si-yUj" id="LOX-Ik-pBI">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Current Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="zUT-tK-TE0" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -284,14 +312,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cWm-EY-2Si">
-                                        <rect key="frame" x="0.0" y="233" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="236" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cWm-EY-2Si" id="GzM-l2-plC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1RP-TY-F4h" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -310,14 +338,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ngc-xm-bep">
-                                        <rect key="frame" x="0.0" y="277" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="281" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ngc-xm-bep" id="ZSC-al-6ah">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KTJ-mM-tIj" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -336,14 +364,14 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="n9B-JT-bCa">
-                                        <rect key="frame" x="0.0" y="321" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="326" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n9B-JT-bCa" id="g00-x3-2g8">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kai-th-35X" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
+                                                    <rect key="frame" x="8" y="5" width="359" height="36"/>
                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                                     <state key="normal" title="Change Password">
@@ -368,14 +396,14 @@
                             <tableViewSection headerTitle="Facebook" id="tOE-co-YGU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="hAY-dH-qiR">
-                                        <rect key="frame" x="0.0" y="393" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="399" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hAY-dH-qiR" id="BNe-cy-Sgi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Facebook Account" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61y-zx-dvi" customClass="TextField" customModule="MyFBAlbums" customModuleProvider="target">
-                                                    <rect key="frame" x="8" y="4" width="359" height="35"/>
+                                                    <rect key="frame" x="8" y="5" width="359" height="35"/>
                                                     <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                                     <color key="tintColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -394,10 +422,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="51A-w8-ycu">
-                                        <rect key="frame" x="0.0" y="437" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="444" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="51A-w8-ycu" id="1N9-0Q-nL3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgf-eF-dWr" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
@@ -426,10 +454,10 @@
                             <tableViewSection headerTitle="Account" id="3SN-QB-9vI">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="dff-2b-EXt">
-                                        <rect key="frame" x="0.0" y="509" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="517" width="375" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dff-2b-EXt" id="s1L-Eq-Jgm">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJZ-E4-4qu" customClass="Button" customModule="MyFBAlbums" customModuleProvider="target">
@@ -488,10 +516,11 @@
         <scene sceneID="64J-bw-n2a">
             <objects>
                 <tableViewController id="3ig-Rk-NiM" customClass="StorageVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0SF-XO-Cah">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="206" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0SF-XO-Cah">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="729"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.72156862749999995" green="0.77647058820000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.72156862749999995" green="0.77647058820000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" showsReorderControl="YES" indentationWidth="10" reuseIdentifier="StorageCellId" rowHeight="206" id="mOi-3O-BCf" customClass="AlbumsTableViewCell" customModule="MyFBAlbums" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="206"/>
@@ -500,11 +529,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="205.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-sx-Rgh">
-                                            <rect key="frame" x="8" y="8" width="359" height="190"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultAlbums" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-sx-Rgh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZlT-zE-14e">
-                                            <rect key="frame" x="46" y="84" width="283" height="37"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCm-cf-BcU">
+                                            <rect key="frame" x="106" y="46" width="163" height="113"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="sCm-cf-BcU" secondAttribute="height" multiplier="283:37" constant="-703.67567567567562" id="M4M-Aj-dwD"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="highlightedColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -513,18 +545,18 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ZlT-zE-14e" firstAttribute="leading" secondItem="jjE-PL-oNy" secondAttribute="leadingMargin" constant="38" id="6DI-g3-3vX"/>
-                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="centerY" secondItem="jjE-PL-oNy" secondAttribute="centerY" id="7tk-V0-qc5"/>
-                                        <constraint firstItem="ZlT-zE-14e" firstAttribute="centerY" secondItem="6Om-sx-Rgh" secondAttribute="centerY" id="9KU-y9-Ydy"/>
-                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="leading" secondItem="jjE-PL-oNy" secondAttribute="leadingMargin" id="ZUH-nr-cda"/>
-                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="top" secondItem="jjE-PL-oNy" secondAttribute="topMargin" id="gyC-hc-ssG"/>
-                                        <constraint firstItem="ZlT-zE-14e" firstAttribute="centerX" secondItem="jjE-PL-oNy" secondAttribute="centerX" id="l37-sw-RVY"/>
-                                        <constraint firstItem="ZlT-zE-14e" firstAttribute="centerX" secondItem="6Om-sx-Rgh" secondAttribute="centerX" id="sJN-Tg-FBR"/>
+                                        <constraint firstItem="sCm-cf-BcU" firstAttribute="centerX" secondItem="6Om-sx-Rgh" secondAttribute="centerX" id="1ZF-IT-fdc"/>
+                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="top" secondItem="jjE-PL-oNy" secondAttribute="top" id="64U-nU-Qd2"/>
+                                        <constraint firstItem="sCm-cf-BcU" firstAttribute="centerY" secondItem="6Om-sx-Rgh" secondAttribute="centerY" id="9Uw-Qh-4vh"/>
+                                        <constraint firstItem="sCm-cf-BcU" firstAttribute="width" secondItem="sCm-cf-BcU" secondAttribute="height" multiplier="283:37" constant="-703.67567567567562" id="EXg-UD-P6p"/>
+                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="leading" secondItem="jjE-PL-oNy" secondAttribute="leading" id="HiC-As-szH"/>
+                                        <constraint firstAttribute="trailing" secondItem="6Om-sx-Rgh" secondAttribute="trailing" id="krZ-MI-Cge"/>
+                                        <constraint firstItem="6Om-sx-Rgh" firstAttribute="centerY" secondItem="jjE-PL-oNy" secondAttribute="centerY" id="sGC-59-tTP"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="albumCoverImageView" destination="6Om-sx-Rgh" id="brq-6D-11M"/>
-                                    <outlet property="albumTitleLabel" destination="ZlT-zE-14e" id="uco-HL-IkF"/>
+                                    <outlet property="albumTitleLabel" destination="sCm-cf-BcU" id="9rS-z7-ruO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -539,7 +571,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="az2-7h-Xc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3241" y="116"/>
+            <point key="canvasLocation" x="3240.8000000000002" y="115.27093596059113"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Guo-1Z-yqc">
@@ -572,8 +604,8 @@
             <objects>
                 <viewController id="9Xq-Ig-wy7" customClass="LoginVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DfU-vR-9FX"/>
-                        <viewControllerLayoutGuide type="bottom" id="QSi-VT-FUf"/>
+                        <viewControllerLayoutGuide type="top" id="O0n-YJ-yFb"/>
+                        <viewControllerLayoutGuide type="bottom" id="uT8-6C-MIx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TzO-Vq-ss3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -742,18 +774,17 @@
                         <color key="backgroundColor" red="0.72156862745098038" green="0.77647058823529413" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6bN-fs-TGM" firstAttribute="trailing" secondItem="TzO-Vq-ss3" secondAttribute="trailingMargin" id="8nb-7Z-NBj"/>
-                            <constraint firstItem="QSi-VT-FUf" firstAttribute="top" secondItem="Dfk-4K-Xpd" secondAttribute="bottom" constant="20" id="FEj-jF-eRk"/>
+                            <constraint firstItem="uT8-6C-MIx" firstAttribute="top" secondItem="Dfk-4K-Xpd" secondAttribute="bottom" constant="20" id="FEj-jF-eRk"/>
                             <constraint firstItem="Dfk-4K-Xpd" firstAttribute="top" secondItem="6bN-fs-TGM" secondAttribute="bottom" constant="20" id="G4y-SS-q69"/>
-                            <constraint firstItem="1q7-IA-wmQ" firstAttribute="trailing" secondItem="af6-Zy-jDG" secondAttribute="trailing" id="SqD-6V-giu"/>
+                            <constraint firstItem="1q7-IA-wmQ" firstAttribute="trailing" secondItem="TzO-Vq-ss3" secondAttribute="trailing" id="SqD-6V-giu"/>
                             <constraint firstItem="Dfk-4K-Xpd" firstAttribute="trailing" secondItem="TzO-Vq-ss3" secondAttribute="trailingMargin" id="Y01-Ge-ZBY"/>
                             <constraint firstItem="6bN-fs-TGM" firstAttribute="leading" secondItem="TzO-Vq-ss3" secondAttribute="leadingMargin" id="YYw-pb-o9y"/>
                             <constraint firstItem="Dfk-4K-Xpd" firstAttribute="leading" secondItem="TzO-Vq-ss3" secondAttribute="leadingMargin" id="bAp-fQ-cqo"/>
                             <constraint firstItem="1q7-IA-wmQ" firstAttribute="centerX" secondItem="TzO-Vq-ss3" secondAttribute="centerX" id="f8g-hE-WFb"/>
-                            <constraint firstItem="6bN-fs-TGM" firstAttribute="top" secondItem="DfU-vR-9FX" secondAttribute="bottom" constant="64" id="o9Y-wy-oD3"/>
-                            <constraint firstItem="1q7-IA-wmQ" firstAttribute="leading" secondItem="af6-Zy-jDG" secondAttribute="leading" id="ozO-NW-S9Y"/>
+                            <constraint firstItem="6bN-fs-TGM" firstAttribute="top" secondItem="O0n-YJ-yFb" secondAttribute="bottom" constant="64" id="o9Y-wy-oD3"/>
+                            <constraint firstItem="1q7-IA-wmQ" firstAttribute="leading" secondItem="TzO-Vq-ss3" secondAttribute="leading" id="ozO-NW-S9Y"/>
                             <constraint firstItem="1q7-IA-wmQ" firstAttribute="top" secondItem="TzO-Vq-ss3" secondAttribute="top" id="tOX-Qa-6A0"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="af6-Zy-jDG"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="4wq-2T-GJD" id="Skf-mK-Xiw"/>
@@ -793,12 +824,12 @@
             </objects>
             <point key="canvasLocation" x="1420" y="116"/>
         </scene>
-        <!--My FB Albums-->
+        <!--Tab Bar Controller-->
         <scene sceneID="2ei-uK-IQb">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="L1f-7z-ruz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="My FB Albums" id="8w5-AV-igb">
+                    <navigationItem key="navigationItem" id="8w5-AV-igb">
                         <barButtonItem key="rightBarButtonItem" image="Settings" id="9Yo-NJ-0Wa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -822,9 +853,59 @@
             </objects>
             <point key="canvasLocation" x="3242" y="-654"/>
         </scene>
+        <!--ImageVC-->
+        <scene sceneID="VNQ-Sf-Rcj">
+            <objects>
+                <viewController storyboardIdentifier="ImageVC" id="Nie-Aq-Scz" customClass="ImageVC" customModule="MyFBAlbums" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bpt-Ec-LLd"/>
+                        <viewControllerLayoutGuide type="bottom" id="m6B-w9-8yI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7aB-wa-maG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELG-Qe-JLp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <imageView multipleTouchEnabled="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultImages" translatesAutoresizingMaskIntoConstraints="NO" id="fhv-Hl-HsA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fhv-Hl-HsA" firstAttribute="leading" secondItem="ELG-Qe-JLp" secondAttribute="leading" id="9Xf-sT-id4"/>
+                                    <constraint firstItem="fhv-Hl-HsA" firstAttribute="centerX" secondItem="ELG-Qe-JLp" secondAttribute="centerX" id="jiF-pf-LzO"/>
+                                    <constraint firstItem="fhv-Hl-HsA" firstAttribute="top" secondItem="ELG-Qe-JLp" secondAttribute="top" id="mMq-gi-880"/>
+                                    <constraint firstItem="fhv-Hl-HsA" firstAttribute="centerY" secondItem="ELG-Qe-JLp" secondAttribute="centerY" id="mWR-ey-roM"/>
+                                    <constraint firstAttribute="bottom" secondItem="fhv-Hl-HsA" secondAttribute="bottom" id="pEr-Ir-aPM"/>
+                                    <constraint firstAttribute="trailing" secondItem="fhv-Hl-HsA" secondAttribute="trailing" id="tQ3-oF-8A9"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="fhv-Hl-HsA" id="Xp1-1P-Axo"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.72156862749999995" green="0.77647058820000003" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ELG-Qe-JLp" firstAttribute="leading" secondItem="7aB-wa-maG" secondAttribute="leading" id="HSX-ss-YFm"/>
+                            <constraint firstAttribute="bottom" secondItem="ELG-Qe-JLp" secondAttribute="bottom" id="I1t-gs-OYZ"/>
+                            <constraint firstItem="ELG-Qe-JLp" firstAttribute="top" secondItem="7aB-wa-maG" secondAttribute="top" id="eT6-Gs-Is0"/>
+                            <constraint firstAttribute="trailing" secondItem="ELG-Qe-JLp" secondAttribute="trailing" id="tqg-nS-I7A"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="fhv-Hl-HsA" id="5jS-i0-yKH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3y8-G8-8cf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4940" y="-655"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Albums" width="25" height="25"/>
+        <image name="DefaultAlbums" width="119" height="63"/>
+        <image name="DefaultImages" width="63" height="63"/>
         <image name="FbLogo" width="200" height="200"/>
         <image name="LogOut" width="25" height="25"/>
         <image name="Settings" width="25" height="25"/>
@@ -832,7 +913,7 @@
         <image name="User" width="75" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Zmu-A8-Y3t"/>
+        <segue reference="7Lb-tW-tRi"/>
         <segue reference="LxJ-NR-kkX"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

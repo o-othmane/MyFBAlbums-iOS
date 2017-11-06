@@ -91,6 +91,7 @@
 
 #if TARGET_OS_SIMULATOR
     NSLog(@"Falling back to storing access token in NSUserDefaults because of simulator bug");
+    key = [NSString stringWithFormat:@"%@_fix", key];
     [[NSUserDefaults standardUserDefaults] setObject:value forKey:key];
 
     return [[NSUserDefaults standardUserDefaults] synchronize];
@@ -132,6 +133,7 @@
 
 #if TARGET_OS_SIMULATOR
     NSLog(@"Falling back to loading access token from NSUserDefaults because of simulator bug");
+    key = [NSString stringWithFormat:@"%@_fix", key];
     return [[NSUserDefaults standardUserDefaults] dataForKey:key];
 #else
     NSMutableDictionary *query = [self queryForKey:key];
