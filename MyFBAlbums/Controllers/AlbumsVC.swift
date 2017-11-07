@@ -109,7 +109,8 @@ class AlbumsVC: UIViewController {
                 }
             }
         }
-        albumRef.child("ImageCount").setValue(index)
+        albumRef.child("albumCover").setValue(album.coverUrl?.absoluteString)
+        albumRef.child("imageCount").setValue(index)
         self.storedAlbums.append(album.name!)
         UserDefaults.standard.set(self.storedAlbums, forKey: "STORED_ALBUMS")
         SCLAlertView().showSuccess("Success", subTitle: "Album uploaded successfully")
@@ -146,24 +147,27 @@ extension AlbumsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        // Share Action
-        let shareAction = UITableViewRowAction(style: .default, title: "Add to\nStorage", handler: { (action, indexPath) in
+        // Store Action
+        let storeAction = UITableViewRowAction(style: .default, title: "Add to\nStorage", handler: { (action, indexPath) in
             self.progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
             let album = self.albums[indexPath.row]
-//            if self.storedAlbums.contains(album.name!) {
-//                self.progressHUD.hide(animated: true)
-//                SCLAlertView().showWarning("Already uploaded", subTitle: "The album you want to upload is already there")
-//            } else {
-                if !album.photos.isEmpty {
-                    self.imageArray = album.photos
-                    self.uploadImages(album:album)
-                } else {
-                    self.getImages(album:album)
+            let currentUser = Auth.auth().currentUser
+            self.databaseRef.child("users").child(currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                if snapshot.hasChild(album.name!){
+                    self.progressHUD.hide(animated: true)
+                    SCLAlertView().showWarning("Album already saved", subTitle: "This album is already in your storage")
+                }else{
+                    if !album.photos.isEmpty {
+                        self.imageArray = album.photos
+                        self.uploadImages(album:album)
+                    } else {
+                        self.getImages(album:album)
+                    }
                 }
-//            }
+            })
         })
-        shareAction.backgroundColor = ORANGE_COLOR
-        return [shareAction]
+        storeAction.backgroundColor = ORANGE_COLOR
+        return [storeAction]
     }
 }
 

@@ -529,7 +529,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="205.66666666666666"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultAlbums" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-sx-Rgh">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DefaultAlbums" translatesAutoresizingMaskIntoConstraints="NO" id="6Om-sx-Rgh">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCm-cf-BcU">
@@ -824,12 +824,12 @@
             </objects>
             <point key="canvasLocation" x="1420" y="116"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My FB Albums-->
         <scene sceneID="2ei-uK-IQb">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="L1f-7z-ruz" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="8w5-AV-igb">
+                    <navigationItem key="navigationItem" title="My FB Albums" id="8w5-AV-igb">
                         <barButtonItem key="rightBarButtonItem" image="Settings" id="9Yo-NJ-0Wa">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
