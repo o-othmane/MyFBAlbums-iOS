@@ -21,4 +21,4 @@ Gist : http://gist.github.com/nsbraksa/a2f427c0759fe585675a217002a84ac3?__s=rcdw
 
 <h1>Screenshots</h1>
 
-<img src="https://preview.ibb.co/fSMROG/output_e4w_MA3.gif" alt="My FB Albums">
+<img src="https://media.giphy.com/media/3ohs7W2GJcU7gEJJXG/giphy.gif" alt="My FB Albums screenshots">
